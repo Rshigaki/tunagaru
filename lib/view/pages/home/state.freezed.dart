@@ -29,7 +29,6 @@ const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
-// Onboardingか完了しているかどうか (= !WelcomeViewに飛ばすかどうか)
   int get count => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -102,7 +101,7 @@ class _$_HomeState extends _HomeState with DiagnosticableTreeMixin {
   const _$_HomeState({this.count = 0}) : super._();
 
   @JsonKey(defaultValue: 0)
-  @override // Onboardingか完了しているかどうか (= !WelcomeViewに飛ばすかどうか)
+  @override
   final int count;
 
   @override
@@ -140,7 +139,7 @@ abstract class _HomeState extends HomeState {
   const factory _HomeState({int count}) = _$_HomeState;
   const _HomeState._() : super._();
 
-  @override // Onboardingか完了しているかどうか (= !WelcomeViewに飛ばすかどうか)
+  @override
   int get count => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

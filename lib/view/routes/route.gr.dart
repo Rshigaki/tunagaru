@@ -19,20 +19,20 @@ class AppRouter extends _i2.RootStackRouter {
 
   @override
   final Map<String, _i2.PageFactory> pagesMap = {
-    MyHomePageRoute.name: (routeData) {
+    MyHomePageViewRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.MyHomePage());
+          routeData: routeData, child: const _i1.MyHomePageView());
     }
   };
 
   @override
   List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(MyHomePageRoute.name, path: '/')];
+      [_i2.RouteConfig(MyHomePageViewRoute.name, path: '/')];
 }
 
-/// generated route for [_i1.MyHomePage]
-class MyHomePageRoute extends _i2.PageRouteInfo<void> {
-  const MyHomePageRoute() : super(name, path: '/');
+/// generated route for [_i1.MyHomePageView]
+class MyHomePageViewRoute extends _i2.PageRouteInfo<void> {
+  const MyHomePageViewRoute() : super(name, path: '/');
 
-  static const String name = 'MyHomePageRoute';
+  static const String name = 'MyHomePageViewRoute';
 }

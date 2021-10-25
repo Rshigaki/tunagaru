@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:tunagaru/view/pages/home/controller.dart';
 
-class MyHomePage extends ConsumerWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MyHomePageView extends ConsumerWidget {
+  const MyHomePageView({Key? key}) : super(key: key);
   final String title = 'test';
 
   @override
