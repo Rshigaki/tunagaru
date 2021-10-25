@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "765820958592",
+    "project_id": "tsunagaru-app",
+    "storage_bucket": "tsunagaru-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765820958592:android:26376983c1b6b1b1b87365",
+        "android_client_info": {
+          "package_name": "com.aitranceformation.tunagaru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765820958592-6e2da559b1j1c5jgot8m294u9joi7ojc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdJMqHJ2JfIRzoZ1fMrvJJIkeAxuV8qkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765820958592-6e2da559b1j1c5jgot8m294u9joi7ojc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "765820958592-554upnd6idm9m4haufogv817s9dr8rg5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aitranceformation.tunagaru"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
