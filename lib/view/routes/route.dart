@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:tunagaru/app.dart';
+import 'package:tunagaru/view/pages/home/ui.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
