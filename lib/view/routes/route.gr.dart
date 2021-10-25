@@ -11,7 +11,7 @@
 import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:flutter/material.dart' as _i3;
 
-import '../pages/home/ui.dart' as _i1;
+import '../pages/root/ui.dart' as _i1;
 
 class AppRouter extends _i2.RootStackRouter {
   AppRouter([_i3.GlobalKey<_i3.NavigatorState>? navigatorKey])
@@ -19,20 +19,20 @@ class AppRouter extends _i2.RootStackRouter {
 
   @override
   final Map<String, _i2.PageFactory> pagesMap = {
-    MyHomePageViewRoute.name: (routeData) {
+    RootViewRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.MyHomePageView());
+          routeData: routeData, child: _i1.RootView());
     }
   };
 
   @override
   List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(MyHomePageViewRoute.name, path: '/')];
+      [_i2.RouteConfig(RootViewRoute.name, path: '/')];
 }
 
-/// generated route for [_i1.MyHomePageView]
-class MyHomePageViewRoute extends _i2.PageRouteInfo<void> {
-  const MyHomePageViewRoute() : super(name, path: '/');
+/// generated route for [_i1.RootView]
+class RootViewRoute extends _i2.PageRouteInfo<void> {
+  const RootViewRoute() : super(name, path: '/');
 
-  static const String name = 'MyHomePageViewRoute';
+  static const String name = 'RootViewRoute';
 }

@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:tunagaru/view/pages/home/ui.dart';
+import 'package:tunagaru/view/pages/root/ui.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
-    AutoRoute(page: MyHomePageView, initial: true),
+    AutoRoute(page: RootView, initial: true),
   ],
 )
 // extend the generated private router

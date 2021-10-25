@@ -7,6 +7,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(
+        primaryColor: const Color.fromRGBO(252, 70, 170, 1),
+        secondaryHeaderColor: const Color.fromRGBO(252, 70, 170, 0.8),
+      ),
       routeInformationParser: _appRouter.defaultRouteParser(),
       routerDelegate: _appRouter.delegate(),
     );
