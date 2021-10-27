@@ -5,9 +5,7 @@ part 'state.freezed.dart';
 
 @freezed
 class HomeState with _$HomeState {
-  const factory HomeState({
-    @Default(0) int count,
-  }) = _HomeState;
+  const factory HomeState() = _HomeState;
 
   const HomeState._();
 }

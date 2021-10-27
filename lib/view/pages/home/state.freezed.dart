@@ -17,10 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$HomeStateTearOff {
   const _$HomeStateTearOff();
 
-  _HomeState call({int count = 0}) {
-    return _HomeState(
-      count: count,
-    );
+  _HomeState call() {
+    return const _HomeState();
   }
 }
 
@@ -28,19 +26,12 @@ class _$HomeStateTearOff {
 const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
-mixin _$HomeState {
-  int get count => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HomeStateCopyWith<HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+mixin _$HomeState {}
 
 /// @nodoc
 abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res>;
-  $Res call({int count});
 }
 
 /// @nodoc
@@ -50,27 +41,13 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
   final HomeState _value;
   // ignore: unused_field
   final $Res Function(HomeState) _then;
-
-  @override
-  $Res call({
-    Object? count = freezed,
-  }) {
-    return _then(_value.copyWith(
-      count: count == freezed
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
-abstract class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+abstract class _$HomeStateCopyWith<$Res> {
   factory _$HomeStateCopyWith(
           _HomeState value, $Res Function(_HomeState) then) =
       __$HomeStateCopyWithImpl<$Res>;
-  @override
-  $Res call({int count});
 }
 
 /// @nodoc
@@ -81,68 +58,34 @@ class __$HomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
   @override
   _HomeState get _value => super._value as _HomeState;
-
-  @override
-  $Res call({
-    Object? count = freezed,
-  }) {
-    return _then(_HomeState(
-      count: count == freezed
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_HomeState extends _HomeState with DiagnosticableTreeMixin {
-  const _$_HomeState({this.count = 0}) : super._();
-
-  @JsonKey(defaultValue: 0)
-  @override
-  final int count;
+  const _$_HomeState() : super._();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeState(count: $count)';
+    return 'HomeState()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'HomeState'))
-      ..add(DiagnosticsProperty('count', count));
+    properties..add(DiagnosticsProperty('type', 'HomeState'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _HomeState &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)));
+    return identical(this, other) || (other is _HomeState);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(count);
-
-  @JsonKey(ignore: true)
-  @override
-  _$HomeStateCopyWith<_HomeState> get copyWith =>
-      __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 }
 
 abstract class _HomeState extends HomeState {
-  const factory _HomeState({int count}) = _$_HomeState;
+  const factory _HomeState() = _$_HomeState;
   const _HomeState._() : super._();
-
-  @override
-  int get count => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$HomeStateCopyWith<_HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
 }

@@ -11,10 +11,4 @@ class HomeController extends StateNotifier<HomeState> {
   ) : super(const HomeState());
 
   final Reader _read;
-
-  void incrementCounter() {
-    state = state.copyWith(
-      count: state.count + 1,
-    );
-  }
 }
