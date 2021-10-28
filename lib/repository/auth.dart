@@ -26,4 +26,9 @@ abstract class AuthRepository {
   static Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
   }
+
+  static Future<void> sendResetPasswordEmail(String email) async {
+    final FirebaseAuth auth = FirebaseAuth.instance;
+    await auth.sendPasswordResetEmail(email: email);
+  }
 }

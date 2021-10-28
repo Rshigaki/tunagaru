@@ -149,7 +149,9 @@ class LoginView extends ConsumerWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.router.push(const ResetPasswordRoute());
+                },
                 child: Text(
                   'パスワードをお忘れですか？',
                   style: TextStyle(

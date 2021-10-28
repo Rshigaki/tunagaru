@@ -3,6 +3,7 @@ import 'package:tunagaru/view/pages/home/ui.dart';
 import 'package:tunagaru/view/pages/root/ui.dart';
 import 'package:tunagaru/view/pages/user/auth/login/ui.dart';
 import 'package:tunagaru/view/pages/user/auth/registration/ui.dart';
+import 'package:tunagaru/view/pages/user/auth/reset_password/ui.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
@@ -21,6 +22,11 @@ import 'package:tunagaru/view/pages/user/auth/registration/ui.dart';
       path: 'registration',
       name: 'RegistrationRoute',
       page: RegistrationView,
+    ),
+    AutoRoute(
+      path: 'reset_password',
+      name: 'ResetPasswordRoute',
+      page: ResetPasswordView,
     ),
     AutoRoute(
       path: 'home',
