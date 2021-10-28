@@ -33,6 +33,10 @@ class LoginController extends StateNotifier<LoginState> {
     }
   }
 
+  void toggleShowPassword() {
+    state = state.copyWith(showPassword: !state.showPassword);
+  }
+
   Future<bool> signIn() async {
     state = state.copyWith(isLoading: true);
     try {

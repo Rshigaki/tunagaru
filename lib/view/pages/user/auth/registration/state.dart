@@ -8,6 +8,7 @@ class RegistrationState with _$RegistrationState {
   const factory RegistrationState({
     @Default(false) bool isLoading,
     @Default(false) bool isValidated,
+    @Default(false) bool showPassword,
     @Default('') String email,
     @Default('') String password,
   }) = _RegistrationState;

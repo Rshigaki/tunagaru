@@ -8,6 +8,7 @@ class LoginState with _$LoginState {
   const factory LoginState({
     @Default(false) bool isLoading,
     @Default(false) bool isValidated,
+    @Default(false) bool showPassword,
     @Default('') String email,
     @Default('') String password,
   }) = _LoginState;

@@ -20,11 +20,13 @@ class _$LoginStateTearOff {
   _LoginState call(
       {bool isLoading = false,
       bool isValidated = false,
+      bool showPassword = false,
       String email = '',
       String password = ''}) {
     return _LoginState(
       isLoading: isLoading,
       isValidated: isValidated,
+      showPassword: showPassword,
       email: email,
       password: password,
     );
@@ -38,6 +40,7 @@ const $LoginState = _$LoginStateTearOff();
 mixin _$LoginState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isValidated => throw _privateConstructorUsedError;
+  bool get showPassword => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
@@ -51,7 +54,12 @@ abstract class $LoginStateCopyWith<$Res> {
   factory $LoginStateCopyWith(
           LoginState value, $Res Function(LoginState) then) =
       _$LoginStateCopyWithImpl<$Res>;
-  $Res call({bool isLoading, bool isValidated, String email, String password});
+  $Res call(
+      {bool isLoading,
+      bool isValidated,
+      bool showPassword,
+      String email,
+      String password});
 }
 
 /// @nodoc
@@ -66,6 +74,7 @@ class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
   $Res call({
     Object? isLoading = freezed,
     Object? isValidated = freezed,
+    Object? showPassword = freezed,
     Object? email = freezed,
     Object? password = freezed,
   }) {
@@ -77,6 +86,10 @@ class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
       isValidated: isValidated == freezed
           ? _value.isValidated
           : isValidated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showPassword: showPassword == freezed
+          ? _value.showPassword
+          : showPassword // ignore: cast_nullable_to_non_nullable
               as bool,
       email: email == freezed
           ? _value.email
@@ -96,7 +109,12 @@ abstract class _$LoginStateCopyWith<$Res> implements $LoginStateCopyWith<$Res> {
           _LoginState value, $Res Function(_LoginState) then) =
       __$LoginStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isLoading, bool isValidated, String email, String password});
+  $Res call(
+      {bool isLoading,
+      bool isValidated,
+      bool showPassword,
+      String email,
+      String password});
 }
 
 /// @nodoc
@@ -113,6 +131,7 @@ class __$LoginStateCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
   $Res call({
     Object? isLoading = freezed,
     Object? isValidated = freezed,
+    Object? showPassword = freezed,
     Object? email = freezed,
     Object? password = freezed,
   }) {
@@ -124,6 +143,10 @@ class __$LoginStateCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
       isValidated: isValidated == freezed
           ? _value.isValidated
           : isValidated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showPassword: showPassword == freezed
+          ? _value.showPassword
+          : showPassword // ignore: cast_nullable_to_non_nullable
               as bool,
       email: email == freezed
           ? _value.email
@@ -143,6 +166,7 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
   const _$_LoginState(
       {this.isLoading = false,
       this.isValidated = false,
+      this.showPassword = false,
       this.email = '',
       this.password = ''})
       : super._();
@@ -153,6 +177,9 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: false)
   @override
   final bool isValidated;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool showPassword;
   @JsonKey(defaultValue: '')
   @override
   final String email;
@@ -162,7 +189,7 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState(isLoading: $isLoading, isValidated: $isValidated, email: $email, password: $password)';
+    return 'LoginState(isLoading: $isLoading, isValidated: $isValidated, showPassword: $showPassword, email: $email, password: $password)';
   }
 
   @override
@@ -172,6 +199,7 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('type', 'LoginState'))
       ..add(DiagnosticsProperty('isLoading', isLoading))
       ..add(DiagnosticsProperty('isValidated', isValidated))
+      ..add(DiagnosticsProperty('showPassword', showPassword))
       ..add(DiagnosticsProperty('email', email))
       ..add(DiagnosticsProperty('password', password));
   }
@@ -186,6 +214,9 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
             (identical(other.isValidated, isValidated) ||
                 const DeepCollectionEquality()
                     .equals(other.isValidated, isValidated)) &&
+            (identical(other.showPassword, showPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.showPassword, showPassword)) &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
             (identical(other.password, password) ||
@@ -198,6 +229,7 @@ class _$_LoginState extends _LoginState with DiagnosticableTreeMixin {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isValidated) ^
+      const DeepCollectionEquality().hash(showPassword) ^
       const DeepCollectionEquality().hash(email) ^
       const DeepCollectionEquality().hash(password);
 
@@ -211,6 +243,7 @@ abstract class _LoginState extends LoginState {
   const factory _LoginState(
       {bool isLoading,
       bool isValidated,
+      bool showPassword,
       String email,
       String password}) = _$_LoginState;
   const _LoginState._() : super._();
@@ -219,6 +252,8 @@ abstract class _LoginState extends LoginState {
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isValidated => throw _privateConstructorUsedError;
+  @override
+  bool get showPassword => throw _privateConstructorUsedError;
   @override
   String get email => throw _privateConstructorUsedError;
   @override

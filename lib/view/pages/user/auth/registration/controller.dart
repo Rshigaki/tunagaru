@@ -33,6 +33,10 @@ class RegistrationController extends StateNotifier<RegistrationState> {
     }
   }
 
+  void toggleShowPassword() {
+    state = state.copyWith(showPassword: !state.showPassword);
+  }
+
   Future<bool> register() async {
     state = state.copyWith(isLoading: true);
     try {

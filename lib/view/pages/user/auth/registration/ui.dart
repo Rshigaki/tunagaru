@@ -91,8 +91,17 @@ class RegistrationView extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             TextFormField(
-                              decoration: const InputDecoration(
+                              obscureText: !registrationState.showPassword,
+                              decoration: InputDecoration(
                                 hintText: "××××××××",
+                                suffixIcon: IconButton(
+                                  icon: Icon(registrationState.showPassword
+                                      ? Icons.visibility
+                                      : Icons.visibility_off),
+                                  onPressed: () {
+                                    registrationController.toggleShowPassword();
+                                  },
+                                ),
                               ),
                               onChanged: (String value) {
                                 registrationController.changePassword(value);

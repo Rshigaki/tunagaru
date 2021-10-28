@@ -88,8 +88,17 @@ class LoginView extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormField(
-                      decoration: const InputDecoration(
+                      obscureText: !loginState.showPassword,
+                      decoration: InputDecoration(
                         hintText: "××××××××",
+                        suffixIcon: IconButton(
+                          icon: Icon(loginState.showPassword
+                              ? Icons.visibility
+                              : Icons.visibility_off),
+                          onPressed: () {
+                            loginController.toggleShowPassword();
+                          },
+                        ),
                       ),
                       onChanged: (String value) {
                         loginController.changePassword(value);
